@@ -143,8 +143,10 @@ public class Puzzles
     public static Map<Integer, Set<String>> invertMultiMap( Map<String, Set<Integer>> input )
     {
         Map<Integer, Set<String>> result = new TreeMap<>();
-        input.forEach((k, v) -> {
-            for (int number : v) {
+        // Iterate key, value pairs
+        input.forEach((oldKey, oldValue) -> {
+            // Iterate numbers in value set
+            for (int number : oldValue) {
                 Set<String> newValue;
                 // If map key exists, get current value set
                 if(result.containsKey(number)) {
@@ -154,8 +156,8 @@ public class Puzzles
                 else {
                     newValue = new TreeSet<>();
                 }
-                // Add key to value set
-                newValue.add(k);
+                // Add key to new value set
+                newValue.add(oldKey);
                 result.put(number, newValue);
             }
         });
