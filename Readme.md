@@ -15,4 +15,4 @@ class in order the unnitest to be successful. Estimated time 4 - 8 hours.
 ## Implementation status
  - Solutions for the puzzles: Done
  - Succesful unit test: Done
- - ''Overall status: Done''
+ - **Overall status: Done**
